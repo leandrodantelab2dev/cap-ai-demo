@@ -1,0 +1,22 @@
+@server = http://localhost:4004
+
+### embeddings.DocumentChunk
+GET {{server}}/embeddings/DocumentChunk
+Content-Type: application/json
+
+
+### embeddings.storeEmbeddings
+POST {{server}}/embeddings/storeEmbeddings
+Content-Type: application/json
+
+{
+    "text": "Lab2dev é uma consultoria."
+}
+
+### chat.getChatRagResponse
+POST {{server}}/chat/getChatRagResponse
+Content-Type: application/json
+
+{
+    "user_query": "Quem é a Lab2dev?"
+}

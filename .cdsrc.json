@@ -1,0 +1,27 @@
+{
+    "cds": {
+        "requires": {
+            "gen-ai-hub": {
+                "gen-ai-hub": {
+                    "gpt-4o": {
+                        "destinationName": "GenAIHubDestination",
+                        "deploymentUrl": "/v2/inference/deployments/d8f4a05959cca2b0",
+                        "resourceGroup": "default",
+                        "apiVersion": "2024-02-15-preview",
+                        "modelName": "gpt-4o"
+                    },
+                    "text-embedding-ada-002": {
+                        "destinationName": "GenAIHubDestination",
+                        "deploymentUrl": "/v2/inference/deployments/d227d36ae763627a",
+                        "resourceGroup": "default",
+                        "apiVersion": "2024-02-15-preview",
+                        "modelName": "text-embedding-ada-002"
+                    }
+                }
+            },
+            "beta": {
+                "vectorType": true
+            }
+        }
+    }
+}
