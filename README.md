@@ -1,33 +1,57 @@
+
 # CAP AI Demo
 
-Este repositório contém uma aplicação de demonstração utilizando o **SAP CAP (Cloud Application Programming)** integrada a serviços de AI via **SAP BTP**.
+Este repositório contém uma aplicação de demonstração utilizando o **SAP Cloud Application Programming (CAP)** integrada com serviços de **AI** no **SAP BTP**.
 
 ## ⚙️ Pré-requisitos
 
-Antes de iniciar, certifique-se de que você tem instalado:
+Certifique-se de ter instalado:
 
-- [Node.js](https://nodejs.org/) (versão 16+)
-- [SAP CDS CLI](https://cap.cloud.sap/docs/get-started/)
-- Acesso ao **SAP BTP** com os serviços vinculados:
-  - cap-ai-demo-cap-destination
-  - cap-ai-demo-cap-auth
-  - cap-ai-demo-cap-db
+- [Node.js](https://nodejs.org/) (versão 16 ou superior)
+- [CDS CLI](https://cap.cloud.sap/docs/get-started/)
+- Acesso ao SAP BTP com os seguintes serviços disponíveis:
+  - Destination
+  - Authentication (XSUAA)
+  - HDI Container (Database)
 
 ## 🚀 Como rodar o projeto localmente
 
-Clone o repositório e siga os passos abaixo:
+1. Clone o repositório:
 
-# Clone o repositório
+```bash
 git clone https://github.com/leandrodantelab2dev/<nome-do-repositorio>.git
 cd <nome-do-repositorio>
+```
 
-# Instale as dependências
+2. Instale as dependências:
+
+```bash
 npm install
+```
 
-# Vincule os serviços do SAP BTP (substitua se necessário)
+3. Vincule os serviços do SAP BTP:
+
+```bash
 cds bind -2 cap-ai-demo-cap-destination:cap-ai-demo-cap-destination
 cds bind -2 cap-ai-demo-cap-auth:cap-ai-demo-cap-auth
 cds bind -2 cap-ai-demo-cap-db:cap-ai-demo-cap-db
+```
 
-# Rode a aplicação em modo de desenvolvimento com perfil híbrido
+4. Rode o projeto com o perfil `hybrid`:
+
+```bash
 cds watch --profile hybrid
+```
+
+> 💡 Dica: certifique-se de estar logado no BTP via `cf login` e que os serviços estejam corretamente criados no seu espaço.
+
+## 📁 Estrutura do Projeto
+
+- `srv/` – Serviços e lógica de negócios
+- `db/` – Modelos de dados e definições
+- `app/` – Frontend (se aplicável)
+- `package.json` – Dependências e scripts
+
+## 📄 Licença
+
+Distribuído sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
