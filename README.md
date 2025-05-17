@@ -14,6 +14,17 @@ Certifique-se de ter instalado:
   - Authentication (XSUAA)
   - HDI Container (Database)
 
+## ☁️ Acesso ao AI Launchpad
+```bash
+https://dev-ai-l2d.ai-launchpad.prod.us-east-1.aws.ai-prod.cloud.sap/aic/index.html#/workspaces&/a/
+```
+
+## ☁️ Usuário para acesso ao AI Launchpad
+```bash
+user10@lab2dev.com
+@Lab2dev2025#
+```
+
 ## 🚀 Como rodar o projeto localmente
 
 1. Clone o repositório:
